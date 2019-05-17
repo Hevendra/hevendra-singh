@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<MainContainer/> should render MainContainer correctly 1`] = `
+<div
+  className="App"
+>
+  <div
+    className="header"
+  >
+    <h1
+      className="App-title"
+    >
+      Pearson User Management
+    </h1>
+    <Pagination
+      fetchUserFromApi={[Function]}
+      isAllFetched={false}
+      pageNo={0}
+    />
+  </div>
+  <div
+    className="Container"
+  >
+    <div
+      className="display-name"
+      key="1"
+    >
+      No User data found!
+       
+    </div>
+  </div>
+</div>
+`;

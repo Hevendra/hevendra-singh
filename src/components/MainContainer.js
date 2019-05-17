@@ -50,7 +50,11 @@ export default class MainContainer extends Component {
         );
       });
     } else {
-      users.push(<div className="display-name">No User data found! </div>);
+      users.push(
+        <div key={1} className="display-name">
+          No User data found!{" "}
+        </div>
+      );
     }
 
     return (
