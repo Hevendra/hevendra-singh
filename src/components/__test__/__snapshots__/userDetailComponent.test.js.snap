@@ -1,0 +1,32 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<UserDetailComponent/> should render user information correctly 1`] = `
+<div
+  className="card-body"
+>
+  <div
+    className="wrapper"
+  >
+    <img
+      alt="PS"
+      className="image--cover"
+      id="image_avatar"
+      src="https://s3.amazonaws.com/uifaces/faces/twitter/mrmoiree/128.jpg"
+    />
+  </div>
+  <p
+    className="display-name"
+  >
+    George Edwards
+     
+  </p>
+  <p
+    className="button"
+    onClick={[Function]}
+  >
+    <span>
+      Delete 
+    </span>
+  </p>
+</div>
+`;

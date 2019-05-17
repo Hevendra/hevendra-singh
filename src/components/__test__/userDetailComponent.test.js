@@ -14,11 +14,18 @@ describe("<UserDetailComponent/>", () => {
       }}
     />
   );
+
+  it("should render user information correctly", () => {
+    expect(wrapper).toMatchSnapshot();
+  });
+
   it("should render correct user name", () => {
     expect(wrapper.find(".display-name").text()).toEqual("George Edwards ");
   });
 
-  it("should render user image", () => {
-    expect(wrapper.find("img").length).toEqual(1);
+  it("should render correct user image", () => {
+    expect(wrapper.find("img").props().src).toEqual(
+      "https://s3.amazonaws.com/uifaces/faces/twitter/mrmoiree/128.jpg"
+    );
   });
 });
