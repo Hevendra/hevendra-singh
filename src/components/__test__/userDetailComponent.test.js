@@ -15,10 +15,10 @@ describe("<UserDetailComponent/>", () => {
     />
   );
   it("should render correct user name", () => {
-    expect(wrapper.find(".display-name").text()).to.contain("George Edwards");
+    expect(wrapper.find(".display-name").text()).toEqual("George Edwards ");
   });
 
   it("should render user image", () => {
-    expect(wrapped.find("img").length).toEqual(1);
+    expect(wrapper.find("img").length).toEqual(1);
   });
 });
