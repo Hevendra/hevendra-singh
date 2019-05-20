@@ -1,33 +1,53 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<MainContainer/> should render MainContainer correctly 1`] = `
-<div
-  className="App"
->
+<MainContainer>
   <div
-    className="header"
-  >
-    <h1
-      className="App-title"
-    >
-      Pearson User Management
-    </h1>
-    <Pagination
-      fetchUserFromApi={[Function]}
-      isAllFetched={false}
-      pageNo={0}
-    />
-  </div>
-  <div
-    className="Container"
+    className="App"
   >
     <div
-      className="display-name"
-      key="1"
+      className="header"
     >
-      No User data found!
-       
+      <h1
+        className="App-title"
+      >
+        Pearson User Management
+      </h1>
+      <Pagination
+        fetchUserFromApi={[Function]}
+        isAllFetched={false}
+        pageNo={0}
+      >
+        <div
+          className="pagination"
+        >
+          <a
+            className="disabled"
+            href="#"
+            onClick={[Function]}
+          >
+            ❮❮
+          </a>
+          <a
+            className="active"
+            href="#"
+            onClick={[Function]}
+          >
+            ❯❯
+          </a>
+        </div>
+      </Pagination>
+    </div>
+    <div
+      className="Container"
+    >
+      <div
+        className="display-name"
+        key="1"
+      >
+        No User data found!
+      </div>
     </div>
   </div>
-</div>
+</MainContainer>
 `;

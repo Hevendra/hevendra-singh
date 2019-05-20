@@ -121,3 +121,10 @@ a.disabled {
 a.active {
   pointer-events: all;
 }
+
+.delete-duplicate {
+  font-size: 14px;
+  color: #007fa3;
+  text-align: center;
+  padding: 5px;
+}

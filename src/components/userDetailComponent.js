@@ -3,17 +3,13 @@ import "../App.css";
 
 const UserDetail = props => {
   const { data, handleDelete } = props;
+  const { avatar, first_name, last_name } = data;
   return (
     <div className="card-body">
       <div className="wrapper">
-        <img
-          id="image_avatar"
-          src={data.avatar}
-          alt="PS"
-          className="image--cover"
-        />
+        <img id="image_avatar" src={avatar} alt="PS" className="image--cover" />
       </div>
-      <p className="display-name">{data.first_name + " " + data.last_name} </p>
+      <p className="display-name">{first_name + " " + last_name} </p>
       <p
         className="button"
         onClick={e => {

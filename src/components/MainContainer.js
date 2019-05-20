@@ -31,14 +31,23 @@ export default class MainContainer extends Component {
 
   deleteUserById(e, userId) {
     let updatedUsersList = this.state.userList.filter(
-      data => data.id !== userId
+      data => data.id != userId
     );
     this.setState({ userList: updatedUsersList });
   }
 
-  render() {
-    let users = [];
+  deleteDuplicateUsers(e) {
+    const updatedUsersList = this.state.userList.reduce(
+      (x, y) =>
+        x.findIndex(e => e.first_name === y.first_name) < 0 ? [...x, y] : x,
+      []
+    );
+    this.setState({ userList: updatedUsersList });
+    e.preventDefault();
+  }
 
+  showUsers() {
+    let users = [];
     if (this.state.userList.length) {
       this.state.userList.map((user, i) => {
         users.push(
@@ -52,11 +61,14 @@ export default class MainContainer extends Component {
     } else {
       users.push(
         <div key={1} className="display-name">
-          No User data found!{" "}
+          No User data found!
         </div>
       );
     }
+    return users;
+  }
 
+  render() {
     return (
       <div className="App">
         <div className="header">
@@ -67,7 +79,16 @@ export default class MainContainer extends Component {
             fetchUserFromApi={this.fetchUserFromApi.bind(this)}
           />
         </div>
-        <div className="Container">{users}</div>
+        <div className="Container">{this.showUsers()}</div>
+        {this.state.userList.length ? (
+          <div className="delete-duplicate">
+            <a href="" onClick={e => this.deleteDuplicateUsers(e)}>
+              Delete Duplicate
+            </a>
+          </div>
+        ) : (
+          ""
+        )}
       </div>
     );
   }
